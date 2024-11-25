@@ -10,103 +10,29 @@ import java.util.Date;
  *
  * @author ilton
  */
-public class Cliente {
+public class Cliente extends Pessoa {
 
-    private int id;
-    private String nome;
-    private char sexo;
-    private Date dataascimento;
-    private String telefone;
-    private String email;
-    private String rg;
     private String endereco;
     private String cep;
 
-    public Cliente(int id, String nome, char sexo, Date dataascimento, String telefone, String email, String rg,String endereco, String cep) {
-        this.id = id;
-        this.nome = nome;
-        this.sexo = sexo;
-        this.dataascimento = dataascimento;
-        this.telefone = telefone;
-        this.email = email;
-        this.rg = rg;
+    public Cliente(String endereco, String cep, int id, String nome, char sexo, Date dataNascimento, String telefone, String Email, String rg) {
+        super(id, nome, sexo, dataNascimento, telefone, Email, rg);
         this.endereco = endereco;
         this.cep = cep;
     }
 
-    public Cliente(int id, String nome, char sexo, String telefone, String endereco) {
-        this.id = id;
-        this.nome = nome;
-        this.sexo = sexo;
-        this.telefone = telefone;
+    public Cliente(int id, String nome, String endereco, String cep) {
+        super(id, nome);
         this.endereco = endereco;
+        this.cep = cep;
     }
-
+    
     public String getEndereco() {
         return endereco;
     }
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
-    }
-    
-    
-    
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public char getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
-    }
-
-    public Date getDataascimento() {
-        return dataascimento;
-    }
-
-    public void setDataascimento(Date dataascimento) {
-        this.dataascimento = dataascimento;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
     }
 
     public String getCep() {
@@ -118,7 +44,6 @@ public class Cliente {
     }
     
     
-    
-    
-    
+
+   
 }
