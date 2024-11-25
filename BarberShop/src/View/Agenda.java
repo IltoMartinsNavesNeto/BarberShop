@@ -53,7 +53,7 @@ public class Agenda extends javax.swing.JFrame {
         jLabelIdAgenda.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelIdAgenda.setForeground(new java.awt.Color(255, 255, 255));
         jLabelIdAgenda.setText("Agenda");
-        getContentPane().add(jLabelIdAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 110, -1));
+        getContentPane().add(jLabelIdAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 110, -1));
 
         jLabelId2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelId2.setForeground(new java.awt.Color(255, 255, 255));

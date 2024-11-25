@@ -42,7 +42,7 @@ public class Login extends javax.swing.JFrame {
         jLabelSenha.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabelSenha.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSenha.setText("Senha");
-        getContentPane().add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
+        getContentPane().add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, -1));
 
         jToggleButton1.setText("Entrar");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +56,7 @@ public class Login extends javax.swing.JFrame {
         jLabelLogin.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabelLogin.setForeground(new java.awt.Color(255, 255, 255));
         jLabelLogin.setText("Login ");
-        getContentPane().add(jLabelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, -1, -1));
+        getContentPane().add(jLabelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
 
         textUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,7 +66,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(textUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 130, 30));
 
         textSenha.setText("jPasswordField1");
-        getContentPane().add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 130, 30));
+        getContentPane().add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 130, 30));
 
         TextUsuario.setBackground(new java.awt.Color(255, 255, 255));
         TextUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
