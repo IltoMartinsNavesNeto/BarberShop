@@ -4,7 +4,6 @@
  */
 package Model;
 
-import java.util.Date;
 
 
 /**
@@ -23,7 +22,7 @@ public class Usuario extends Pessoa {
     }
  
 
-    public Usuario(String senha, String nivelAcesso, int id, String nome, char sexo, Date dataNascimento, String telefone, String Email, String rg) {
+    public Usuario(String senha, String nivelAcesso, int id, String nome, char sexo, String dataNascimento, String telefone, String Email, String rg) {
         super(id, nome, sexo, dataNascimento, telefone, Email, rg);
         this.senha = senha;
         this.nivelAcesso = nivelAcesso;

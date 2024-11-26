@@ -4,7 +4,6 @@
  */
 package Model;
 
-import java.util.Date;
 
 /**
  *
@@ -15,7 +14,7 @@ public class Cliente extends Pessoa {
     private String endereco;
     private String cep;
 
-    public Cliente(String endereco, String cep, int id, String nome, char sexo, Date dataNascimento, String telefone, String Email, String rg) {
+    public Cliente(String endereco, String cep, int id, String nome, char sexo, String dataNascimento, String telefone, String Email, String rg) {
         super(id, nome, sexo, dataNascimento, telefone, Email, rg);
         this.endereco = endereco;
         this.cep = cep;
@@ -41,6 +40,11 @@ public class Cliente extends Pessoa {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "endereco=" + endereco + ", cep=" + cep + '}';
     }
     
     
