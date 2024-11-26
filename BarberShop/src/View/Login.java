@@ -4,17 +4,25 @@
  */
 package View;
 
+import Controller.LoginController;
+import java.awt.TextField;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+
 /**
  *
  * @author ilton
  */
 public class Login extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -29,9 +37,9 @@ public class Login extends javax.swing.JFrame {
         jLabelSenha = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         jLabelLogin = new javax.swing.JLabel();
-        textUsuario = new java.awt.TextField();
-        textSenha = new javax.swing.JPasswordField();
-        TextUsuario = new javax.swing.JLabel();
+        TextUsuario = new java.awt.TextField();
+        TextSenha = new javax.swing.JPasswordField();
+        jLabelUsuario = new javax.swing.JLabel();
         jLabelFundo = new javax.swing.JLabel();
         jLabelLogo = new javax.swing.JLabel();
 
@@ -58,21 +66,25 @@ public class Login extends javax.swing.JFrame {
         jLabelLogin.setText("Login ");
         getContentPane().add(jLabelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
 
-        textUsuario.addActionListener(new java.awt.event.ActionListener() {
+        TextUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textUsuarioActionPerformed(evt);
+                TextUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(textUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 130, 30));
+        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 130, 30));
 
-        textSenha.setText("jPasswordField1");
-        getContentPane().add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 130, 30));
+        TextSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextSenhaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 130, 30));
 
-        TextUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        TextUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        TextUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        TextUsuario.setText("Usuario");
-        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
+        jLabelUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario.setText("Usuario");
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
 
         jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/tela de fundo do login.png"))); // NOI18N
         jLabelFundo.setText("jLabel2");
@@ -85,13 +97,17 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textUsuarioActionPerformed
+    private void TextUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textUsuarioActionPerformed
+    }//GEN-LAST:event_TextUsuarioActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+        this.controller.fizTarefa();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void TextSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,13 +145,37 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel TextUsuario;
+    private javax.swing.JPasswordField TextSenha;
+    private java.awt.TextField TextUsuario;
     private javax.swing.JLabel jLabelFundo;
     private javax.swing.JLabel jLabelLogin;
     private javax.swing.JLabel jLabelLogo;
     private javax.swing.JLabel jLabelSenha;
+    private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JPasswordField textSenha;
-    private java.awt.TextField textUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog( null, mensagem);
+    }
+
+    public JPasswordField getTextSenha() {
+        return TextSenha;
+    }
+
+    public void setTextSenha(JPasswordField TextSenha) {
+        this.TextSenha = TextSenha;
+    }
+
+    public TextField getTextUsuario() {
+        return TextUsuario;
+    }
+
+    public void setTextUsuario(TextField TextUsuario) {
+        this.TextUsuario = TextUsuario;
+    }
+
+    
+    
+    
 }
