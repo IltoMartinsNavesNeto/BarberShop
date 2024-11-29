@@ -1,8 +1,10 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+
+import Controller.MenuPrincipalController;
 
 /**
  *
@@ -10,11 +12,15 @@ package View;
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
+    private final MenuPrincipalController controller;
+
     /**
      * Creates new form MenuPrincipal
      */
+    
     public MenuPrincipal() {
         initComponents();
+        this.controller = new MenuPrincipalController(this);
     }
 
     /**
@@ -31,7 +37,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuCadastro = new javax.swing.JMenu();
         jMenuCliente = new javax.swing.JMenuItem();
         jMenuServico = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuOperação = new javax.swing.JMenu();
+        jMenuAgenda = new javax.swing.JMenuItem();
+        jMenuRelatorios = new javax.swing.JMenu();
+        jMenuRelatorio = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,8 +59,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuCadastro);
 
-        jMenu2.setText("Operação ");
-        jMenuBar1.add(jMenu2);
+        jMenuOperação.setText("Operação ");
+
+        jMenuAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/agenda.png"))); // NOI18N
+        jMenuAgenda.setText("Agenda");
+        jMenuAgenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAgendaActionPerformed(evt);
+            }
+        });
+        jMenuOperação.add(jMenuAgenda);
+
+        jMenuBar1.add(jMenuOperação);
+
+        jMenuRelatorios.setText("Relatório");
+
+        jMenuRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/agenda.png"))); // NOI18N
+        jMenuRelatorio.setText("Agenda");
+        jMenuRelatorios.add(jMenuRelatorio);
+
+        jMenuBar1.add(jMenuRelatorios);
 
         setJMenuBar(jMenuBar1);
 
@@ -73,6 +100,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAgendaActionPerformed
+        this.controller.navegarParaAgenda();
+    }//GEN-LAST:event_jMenuAgendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,10 +143,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem jMenuAgenda;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenuItem jMenuCliente;
+    private javax.swing.JMenu jMenuOperação;
+    private javax.swing.JMenuItem jMenuRelatorio;
+    private javax.swing.JMenu jMenuRelatorios;
     private javax.swing.JMenuItem jMenuServico;
     // End of variables declaration//GEN-END:variables
 }

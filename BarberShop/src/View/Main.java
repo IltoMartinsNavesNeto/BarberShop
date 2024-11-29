@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         
         Cliente cliente = new Cliente(1, "neto", "rua maria grossi 120", "34991431979");
-        Usuario usuario = new Usuario(1, "barbeiro", "senha", "1");
+        Usuario usuario = new Usuario(1, "barbeiro", "senha");
         Servico servico = new Servico(1, "barba", 30);
  
         

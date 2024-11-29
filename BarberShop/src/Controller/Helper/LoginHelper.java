@@ -22,7 +22,7 @@ public class LoginHelper {
     public Usuario obterModelo(){
         String nome = view.getTextUsuario().getText();
         String senha = view.getTextSenha().getText();
-        Usuario modelo = new Usuario(0, nome, senha, null);
+        Usuario modelo = new Usuario(0, nome, senha);
         return modelo;
     }
     
